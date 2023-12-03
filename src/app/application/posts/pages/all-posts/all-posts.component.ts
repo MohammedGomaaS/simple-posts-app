@@ -34,7 +34,7 @@ export class AllPostsComponent implements OnInit, OnDestroy {
     this.createSearchForm();
   }
 
-  private createSearchForm(): void {
+  public createSearchForm(): void {
     this.searchForm = this.fb.group({
       searchText: [this.filterParams?.searchText]
     });
@@ -46,7 +46,7 @@ export class AllPostsComponent implements OnInit, OnDestroy {
   }
 
 
-  private subscribeToUrlParams(): void {
+  public subscribeToUrlParams(): void {
     this.subscriptions.push(
       this.route.queryParams.subscribe(params => {
         Object.assign(this.filterParams, params);
