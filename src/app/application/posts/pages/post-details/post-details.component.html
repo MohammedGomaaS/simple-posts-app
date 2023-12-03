@@ -1,0 +1,28 @@
+<ng-container class="w-color" *ngIf="postError">{{postError}}</ng-container>
+<ng-container *ngIf="post$|async as post">
+  <app-content class="m-10" [content]="post.post">
+    <ng-container postMetaData>
+      <span *ngIf="post.user.name">Posted
+        By:{{post.user.name}}</span>
+    </ng-container>
+  </app-content>
+</ng-container>
+
+
+
+
+
+
+
+<h3 class="w-color">All comments</h3>
+<div class="m-10">
+  <ng-container class="w-color" *ngIf="commentsError">{{commentsError}}</ng-container>
+  <ng-container role="listitem" *ngFor="let listItem of componentList$|async">
+    <app-content class="m-10" [content]="listItem.comment">
+      <ng-container postMetaData>
+        <span *ngIf="listItem.user.name">Posted
+          By:{{listItem.user.name}}</span>
+      </ng-container>
+    </app-content>
+  </ng-container>
+</div>

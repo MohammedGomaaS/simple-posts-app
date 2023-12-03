@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.page-content{
+  background-color: rgb(10 10 10);
+  padding: 20px;
+}
+.p-10{
+  padding: 10px;
+}
+.pt-10{
+  padding-top: 10px;
+}
+
+.pb-10{
+  padding-bottom: 10px;
+}
+
+.pl-10{
+  padding-left: 10px;
+}
+
+.pr-10{
+  padding-right: 10px;
+}
+
+.m-10{
+  margin: 10px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+
+.mb-10{
+  margin-bottom: 10px;
+}
+
+.ml-10{
+  margin-left: 10px;
+}
+
+.pr-10{
+  padding-right: 10px;
+}
+.w-color{
+  color: #fff;
+}
+.pointer {cursor: pointer;}

@@ -1,0 +1,22 @@
+<div [formGroup]="searchForm" *ngIf="searchForm">
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input matInput type="text" formControlName="searchText">
+  </mat-form-field>
+</div>
+
+<h3 class="w-color">
+  <ng-container *ngIf="componentList.length === posts.length">All</ng-container> Posts
+</h3>
+
+
+<ng-container *ngFor="let listItem of componentList">
+  <app-content class="m-10 pointer" [content]="listItem.post" (onClick)="navigateToPostDetails(listItem.post.id)">
+    <ng-container postMetaData>
+      <span>Posted By:{{listItem.user.name}}</span>
+    </ng-container>
+  </app-content>
+</ng-container>
+
+<span class="w-color" *ngIf="!componentList.length&&!isLoading">No items were found</span>
+<span class="w-color" *ngIf="err">{{err}}</span>
